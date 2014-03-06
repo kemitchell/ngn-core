@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+before_install: "npm install -g ngn"
+before_script: "npm link ngn"
+notifications:
+  hipchat:
+    rooms:
+      secure: ft51x/ak4BDKpEDyFh6zuS5nZsGcPvChd0f6yrrOuhKUuKAx3KzAPjeqTnRsRBCHYnjAwvxEzE0SsgftHTrYFkosm7WCZArMqsRoSRrTHGRqQImcO0RQzGV7i9G+2rgL+LlOXkZWhCTYuCu5oijKaeSLvORUiMK/25i8SKsS+gM=
+    template:
+    - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
+    format: html

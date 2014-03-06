@@ -1,0 +1,28 @@
+{
+  "name": "ngn-core",
+  "version": "1.0.0",
+  "description": "The commons library used in every NGN module.",
+  "main": "./lib/bootstrap.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "primus": "~2.0.3",
+    "ws": "~0.4.31"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha --harmony test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodengn/ngn-core.git"
+  },
+  "keywords": [
+    "NGN",
+    "core"
+  ],
+  "author": "Corey Butler <corey@nodengn.com> (http://www.nodengn.com)",
+  "license": "GPL",
+  "readmeFilename": "README.md"
+}

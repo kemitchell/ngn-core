@@ -1,0 +1,11 @@
+*/.git/*
+.DS_Store
+.*
+_*
+!.gitignore
+!.jshintignore
+!.npmignore
+!.travis.yml
+*.db
+npm-debug.log
+node_modules

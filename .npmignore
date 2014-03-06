@@ -1,0 +1,8 @@
+Gruntfile.js
+!bin/.config.json
+logs
+docs
+node_modules
+*.md
+.*
+_*
