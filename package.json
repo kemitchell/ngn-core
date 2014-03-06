@@ -10,7 +10,9 @@
     "primus": "~2.0.3",
     "ws": "~0.4.31"
   },
-  "devDependencies": {},
+  "devDependencies": {
+		"mocha": "~1.17.1"
+	},
   "scripts": {
     "test": "mocha --harmony test"
   },
