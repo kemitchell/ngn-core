@@ -18,6 +18,7 @@ suite('Core Sanity Test:', function(){
 
   test('Core classes are in NGN.core', function(){
 		console.log(__dirname);
+		console.log(NGN);
     dir.forEach(function(file){
 			assert.ok(NGN.core[path.basename(file,'.js')] !== undefined,'NGN.core.'+path.basename(file,'.js')+' not loaded.');
     });
