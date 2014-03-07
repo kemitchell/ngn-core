@@ -49,6 +49,7 @@ suite('Local Area Network Communications',function(){
 				done();
 			});
 		});
+		// Listen on standard debugging port.
 		server.listen(55555,NGN.LAN.connect);
 	});
 });
