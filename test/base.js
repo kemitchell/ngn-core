@@ -26,7 +26,11 @@ suite('Core Sanity Test:', function(){
 
   test('Core classes construct properly', function(){
     dir.forEach(function(file){
-      assert.ok(new NGN.core[path.basename(file,'.js')]() !== undefined,'NGN.core.'+path.basename(file,'.js')+' not loaded.');
+			if (path.basename(file,'.js') === 'LAN'){
+				assert.ok(NGN.core[path.basename(file,'.js')] !== undefined,path.basename(file,'.js')+' does not exist in NGN namespace.');
+			} else {
+				assert.ok(new NGN.core[path.basename(file,'.js')]() !== undefined,'NGN.core.'+path.basename(file,'.js')+' not loaded.');
+			}
     });
   });
 });
