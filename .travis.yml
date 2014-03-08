@@ -3,7 +3,7 @@ node_js:
 - '0.11'
 - '0.10'
 before_install: "npm install -g ngn"
-before_script: "npm link ngn"
+before_script: "npm link; npm link ngn"
 notifications:
   hipchat:
     rooms:
