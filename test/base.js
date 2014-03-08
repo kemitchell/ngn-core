@@ -16,20 +16,18 @@ suite('Core Sanity Test:', function(){
     UTIL.testing = true;
   });
 
-  test('Core classes are in NGN.core', function(){
-		console.log(__dirname);
-		console.log(NGN);
+  test('Base NGN namespace extended', function(){
     dir.forEach(function(file){
-			assert.ok(NGN.core[path.basename(file,'.js')] !== undefined,'NGN.core.'+path.basename(file,'.js')+' not loaded.');
+			assert.ok(NGN[path.basename(file,'.js')] !== undefined,'NGN.'+path.basename(file,'.js')+' not loaded.');
     });
   });
 
-  test('Core classes construct properly', function(){
+  test('NGN extensions construct properly', function(){
     dir.forEach(function(file){
 			if (path.basename(file,'.js') === 'LAN'){
-				assert.ok(NGN.core[path.basename(file,'.js')] !== undefined,path.basename(file,'.js')+' does not exist in NGN namespace.');
+				assert.ok(NGN[path.basename(file,'.js')].hasOwnProperty('connect'),path.basename(file,'.js')+' does not exist in NGN namespace.');
 			} else {
-				assert.ok(new NGN.core[path.basename(file,'.js')]() !== undefined,'NGN.core.'+path.basename(file,'.js')+' not loaded.');
+				assert.ok(new NGN[path.basename(file,'.js')]() !== undefined,'NGN.'+path.basename(file,'.js')+' not loaded.');
 			}
     });
   });
