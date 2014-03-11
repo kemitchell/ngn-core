@@ -27,7 +27,7 @@ suite('Core Sanity Test:', function(){
 			if (path.basename(file,'.js') === 'LAN'){
 				assert.ok(NGN[path.basename(file,'.js')].hasOwnProperty('connect'),path.basename(file,'.js')+' does not exist in NGN namespace.');
 			} else if (['Log'].indexOf(path.basename(file,'.js')) >= 0){
-				assert.ok(typeof NGN[path.basename(file,'.js')] === 'object','Not an object.');
+				assert.ok(typeof NGN[path.basename(file,'.js')] === 'object','NGN.'+path.basename(file,'.js')+' is not an object.');
 			} else {
 				console.log(path.basename(file,'.js'));
 				assert.ok(new NGN[path.basename(file,'.js')]() !== undefined,'NGN.'+path.basename(file,'.js')+' not loaded.');
