@@ -7,12 +7,13 @@
     "test": "test"
   },
   "dependencies": {
-    "primus": "~2.0.3",
-    "ws": "~0.4.31"
+    "primus": "2.2.1",
+    "engine.io-client": "1.1.1",
+    "engine.io": "^1.1.1"
   },
   "devDependencies": {
-		"mocha": "~1.17.1"
-	},
+    "mocha": "~1.17.1"
+  },
   "scripts": {
     "test": "mocha --harmony test"
   },
