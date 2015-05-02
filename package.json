@@ -26,6 +26,6 @@
     "core"
   ],
   "author": "Corey Butler <corey@nodengn.com> (http://www.nodengn.com)",
-  "license": "GPL",
+  "license": "GPL-3.0",
   "readmeFilename": "README.md"
 }
